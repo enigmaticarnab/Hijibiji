@@ -1,10 +1,11 @@
 package arnab;
-
+// Line added for second commit
 public class Test2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("This is arnab 2nd commit for Test2");
+		Test test1=new Test();
+		test1.printar();
 	}
 
 }
