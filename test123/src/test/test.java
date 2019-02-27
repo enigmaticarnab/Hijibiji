@@ -15,7 +15,7 @@ public class test {
 		//System.setProperty("webdriver.chrome.driver", exePath);
 		//ChromeDriver driver = new ChromeDriver();
 		//driver.get("https://www.google.co.in");
-		
+		//Arnab
 		String url = "jdbc:sqlserver://DESKTOP-RGJVMQJ\\SQLEXPRESS;databaseName=arnab;integratedSecurity=true";
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		try {
