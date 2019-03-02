@@ -1,6 +1,6 @@
 package arnab;
 // Line added for second commit
-// this for uncommit
+// commit for to check revert commit
 public class Test2 {
 
 	public static void main(String[] args) {
