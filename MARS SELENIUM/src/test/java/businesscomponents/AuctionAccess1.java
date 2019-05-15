@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//import org.testng.Assert;
+import org.testng.Assert;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -3303,7 +3303,42 @@ public class AuctionAccess1 extends ReusableLibrary {
 			
 
 	    }
-	
+   public void loginGmailarnab() throws Exception {
+		String uid = dataTable.getData("General_Data", "UserID");	
+		String pwd = dataTable.getData("General_Data", "Password");	
+		
+		try {
+			driver.manage().timeouts().pageLoadTimeout(500, TimeUnit.SECONDS);		
+			String strAppURL = "https://www.gmail.com";
+			driver.get(strAppURL);			
+			Thread.sleep(10000);
+		//driver.findElement(By.xpath("//a[text()='Gmail']")).click();
+		//Thread.sleep(10000);
+		System.out.println("clicked on the gmail link");
+		// providing the user name 
+		driver.findElement(By.xpath("//input[@type='email']")).click();
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys(uid);
+		System.out.println("entered username");
+		//Hitting Next
+		driver.findElement(By.xpath("//*[text()='Next']")).click();
+		System.out.println("clicked next");
+		Thread.sleep(5000);
+		//Providing password
+		driver.findElement(By.xpath("//input[@type='password']")).click();
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(pwd);
+		System.out.println("entered password");
+		//Hitting Next
+			driver.findElement(By.xpath("//*[text()='Next']")).click();
+			Thread.sleep(20000);
+			System.out.println("in the login page");
+		
+		}
+		catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+	}
+
 }
    
    
